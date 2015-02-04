@@ -1,0 +1,1 @@
+<div class="header">Edit this,According to your needs <p><b>Location</b> Web-INF/template/default/header.jsp</p></div>
