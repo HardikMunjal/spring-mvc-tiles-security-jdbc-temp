@@ -21,4 +21,8 @@ public interface ContactDAO {
 	public Contact get(int contactId);
 	
 	public List<Contact> list();
+	
+	public void createAuditTable(Contact contact,Contact person);
+	
+	
 }

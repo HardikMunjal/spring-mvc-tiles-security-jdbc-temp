@@ -109,4 +109,28 @@ public class ContactDAOImpl implements ContactDAO {
 	    });
 	}
 
+
+
+	@Override
+	public void createAuditTable(Contact contact,Contact person) {
+		// TODO Auto-generated method stub
+		JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
+		// implementation details goes here...
+		
+		
+			// insert
+            String sql1= "create table contact_aud(name int,email varchar(20),createdBy varchar(20)";
+            
+		
+			String sql = "INSERT INTO contact_aud (name, email, address, telephone,person)"
+						+ " VALUES (?, ?, ?, ?,?)";
+			
+			jdbcTemplate.update(sql,contact.getId(), contact.getName(), contact.getEmail(),
+					contact.getAddress(), contact.getTelephone(),person.getName());
+		
+	}
+
+		
+	
+
 }

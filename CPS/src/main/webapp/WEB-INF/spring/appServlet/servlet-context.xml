@@ -15,9 +15,10 @@
     <context:component-scan base-package="com.polestar" use-default-filters="false">
         <context:include-filter expression="org.springframework.stereotype.Controller" type="annotation"/>
     </context:component-scan>
+   
     
     <context:component-scan base-package="com.polestar"/>
-    <mvc:resources location="/, classpath:/META-INF/web-resources/" mapping="/resources/**"/>
+   <mvc:resources mapping="/resources/**" location="/resources/" />
     
     <!-- Turns on support for mapping requests to Spring MVC @Controller methods
          Also registers default Formatters and Validators for use across all @Controllers -->
